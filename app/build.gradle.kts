@@ -24,12 +24,12 @@ android {
         // 请换一个applicationId，不要和官方的任何发布版本产生冲突。
         // If you use InstallerX source code, package it into apk or other installation package format
         // Please change the applicationId to one that does not conflict with any official release.
-        applicationId = "com.rosan.installer.x.revived"
+        applicationId = "com.rosan.installer.x.next"
         namespace = "com.rosan.installer"
-        minSdk = 34
+        minSdk = 27
         targetSdk = 35
-        versionCode = 31
-        versionName = "2.1"
+        versionCode = 32
+        versionName = "NEXT"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -76,12 +76,8 @@ android {
         }
 
         getByName("release") {
-            signingConfig = signingConfigs.getByName("release")
+            
             isMinifyEnabled = true
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
         }
     }
 
